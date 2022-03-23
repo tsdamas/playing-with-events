@@ -79,3 +79,27 @@ body.addEventListener("keydown", (event) =>{
     : (body.style.backgroundColor = "");
   }
 }); 
+
+/**
+ * Forms events
+ */
+
+const userNumber = document.querySelector("form"); 
+
+userNumber.addEventListener("submit", displayUserNumber);
+
+function displayUserNumber(e) {
+  e.preventDefault();
+  var select = userNumber.querySelector("input").value;
+
+  console.log(select);
+  document.querySelector(".repos__number").innerHTML = `${select} repos`;
+  userNumber.querySelector("input").value=""; 
+}
+
+
+
+
+
+
+
