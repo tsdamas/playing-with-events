@@ -70,7 +70,7 @@ body.addEventListener("keydown", (event) =>{
 
   //Test for KeyA
   /**
-   * Ternary operator : Considering event.code is equal to KeyA if the background color equals to empty string 
+   * Ternary operator: Considering event.code is equal to KeyA if the background color equals to empty string 
    * then output the color chosen, else remove the color
    */ 
   if (event.code === "KeyA") {
@@ -84,10 +84,13 @@ body.addEventListener("keydown", (event) =>{
  * Forms events
  */
 
+//Selecting form element
 const userNumber = document.querySelector("form"); 
 
+//Event listener
 userNumber.addEventListener("submit", displayUserNumber);
 
+//Display number function
 function displayUserNumber(e) {
   e.preventDefault();
   var select = userNumber.querySelector("input").value;
